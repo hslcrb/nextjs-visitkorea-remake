@@ -22,7 +22,7 @@ export default function DestinationsSection() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {destinations.map((item, i) => (
             <AnimatedReveal key={item.id} delay={i * 80}>
-              <div className="group relative overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+              <a href={`/destinations/${item.id}`} className="group relative block overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
                 <div className="relative h-64 overflow-hidden">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
@@ -43,7 +43,7 @@ export default function DestinationsSection() {
                     {item.description}
                   </p>
                 </div>
-              </div>
+              </a>
             </AnimatedReveal>
           ))}
         </div>
